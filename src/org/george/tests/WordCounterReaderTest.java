@@ -45,6 +45,11 @@ public class WordCounterReaderTest {
 		
 	}
 	
+	@Test
+	public void wordCountAndSortingTest(){
+		
+	}
+	
 	//A singleton to populate the list with mock data
 	public enum E {
 	    may,

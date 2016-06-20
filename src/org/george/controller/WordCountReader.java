@@ -12,7 +12,7 @@ import java.util.TreeSet;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 
-/* Coding test for Ensemble, written  using Google coding standards
+/* Coding test , written  using Google coding standards
  *Requires Java 8 
  *The Project can be tested either by running the main method or 
  *the corresponding JUnit Tests
@@ -33,17 +33,14 @@ import java.util.stream.Collectors;
 
 public class WordCountReader {
 	
-	public final static String filelocation = "./resources/test1";
+	public final static String FILELOCATION = "./resources/test1";
 	
-	//String fileLocation = WordCountReader.class.getResource("test1.txt").getPath();
-
 	public static HashSet<String> uniqueWords;
-	public ArrayList<String> testfoo;
 	
 	// Using Java 8 Streams instead of bufferedReader to read the input file
     public static List<String> readFileIntoListOfWords() {
         try {
-            return Files.readAllLines(Paths.get(filelocation))
+            return Files.readAllLines(Paths.get(FILELOCATION))
                 .stream()
                 .map(l -> l.split("[\\W]+"))   //splitting the words so that we ll ignore symbols (i.e. !, * etc.)
                 .flatMap(Arrays::stream)
